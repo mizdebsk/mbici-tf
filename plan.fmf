@@ -1,0 +1,7 @@
+discover:
+  how: fmf
+provision:
+  how: container
+  image: quay.io/mizdebsk/mbici-tf:latest
+execute:
+  how: tmt
