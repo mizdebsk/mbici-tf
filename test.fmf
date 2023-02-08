@@ -9,6 +9,7 @@ test: |
     -e REPORT_DIR="/mnt" \
     --privileged \
     --mount type=bind,source=${TMT_TEST_DATA},target=/mnt/ \
+    --mount type=bind,source=${PWD},target=/srv/ \
     -it \
-    quay.io/mizdebsk/mbici-tf:latest /run.sh
+    quay.io/mizdebsk/mbici-tf:latest /srv/run.sh
 result: custom

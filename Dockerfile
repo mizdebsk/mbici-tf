@@ -13,7 +13,6 @@ RUN dnf clean all
 RUN useradd -u 18611 -G mock mbici
 
 COPY --from=builder "/mbici-workflow/target/mbici-wf" "/mbici-wf"
-COPY run.sh "/run.sh"
 
 USER mbici
 WORKDIR /home/mbici
