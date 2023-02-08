@@ -5,7 +5,9 @@ test: |
     -e PLAN="${PLAN}" \
     -e PLATFORM="${PLATFORM}" \
     -e SUBJECT="${SUBJECT}" \
+    -e REPORT_DIR="/mnt/report" \
     --privileged \
+    --mount type=bind,source=${TMT_TEST_DATA},target=/mnt/ \
     -it \
     quay.io/mizdebsk/mbici-tf:latest /run.sh
   cat results-template.yaml >${TMT_TEST_DATA}/results.yaml
