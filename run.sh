@@ -22,8 +22,8 @@ set -x
 /mbici-wf run \
 	  -batch \
 	  -maxCheckoutTasks 10 \
-	  -maxSrpmTasks 20 \
-	  -maxRpmTasks 10 \
+	  -maxSrpmTasks 10 \
+	  -maxRpmTasks 5 \
 	  -workflow workflow.xml \
 	  -resultDir result \
 	  -cacheDir cache \
