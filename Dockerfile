@@ -16,4 +16,4 @@ COPY --from=builder "/mbici-workflow/target/mbici-wf" "/mbici-wf"
 COPY run.sh "/run.sh"
 
 USER mbici
-WORKDIR /home/mbic
+WORKDIR /home/mbici
