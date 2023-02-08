@@ -1,0 +1,5 @@
+- name: /mbici/report
+  result: info
+  log:
+   - data/test/output.txt
+   - data/test/data/report/result.html
