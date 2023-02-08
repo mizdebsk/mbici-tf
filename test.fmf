@@ -1,6 +1,7 @@
 require:
   - podman
 test: |
+  chmod a+rwx ${TMT_TEST_DATA}
   podman run \
     -e PLAN="${PLAN}" \
     -e PLATFORM="${PLATFORM}" \
