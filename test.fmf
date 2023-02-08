@@ -1,1 +1,10 @@
-test: /run.sh
+require:
+  - podman
+test: |
+  podman run \
+    -e PLAN="${PLAN}" \
+    -e PLATFORM="${PLATFORM}" \
+    -e SUBJECT="${SUBJECT}" \
+    --privileged \
+    -it \
+    quay.io/mizdebsk/mbici-tf:latest /run.sh

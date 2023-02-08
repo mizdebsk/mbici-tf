@@ -1,7 +1,6 @@
 discover:
   how: fmf
 provision:
-  how: container
-  image: quay.io/mizdebsk/mbici-tf:latest
+  how: virtual
 execute:
   how: tmt
