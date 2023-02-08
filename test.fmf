@@ -1,3 +1,4 @@
+duration: 6h
 require:
   - podman
 test: |
