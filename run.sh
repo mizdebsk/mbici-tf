@@ -1,8 +1,17 @@
 #!/bin/sh
-set -eux
+set -eu
 echo "${PLAN}" | base64 -d | zcat >plan.xml
 echo "${PLATFORM}" | base64 -d | zcat >platform.xml
 echo "${SUBJECT}" | base64 -d | zcat >subject.xml
+
+echo === CPU info ===
+lscpu
+echo
+echo === Memory info ===
+free -h
+echo
+
+set -x
 
 /mbici-wf generate \
 	  -plan plan.xml \
