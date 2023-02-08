@@ -12,6 +12,9 @@ echo "${SUBJECT}" | base64 -d | zcat >subject.xml
 
 /mbici-wf run \
 	  -batch \
+	  -maxCheckoutTasks 10 \
+	  -maxSrpmTasks 20 \
+	  -maxRpmTasks 10 \
 	  -workflow workflow.xml \
 	  -resultDir result \
 	  -cacheDir cache \
