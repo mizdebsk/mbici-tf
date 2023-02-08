@@ -6,10 +6,9 @@ test: |
     -e PLAN="${PLAN}" \
     -e PLATFORM="${PLATFORM}" \
     -e SUBJECT="${SUBJECT}" \
-    -e REPORT_DIR="/mnt/report" \
+    -e REPORT_DIR="/mnt" \
     --privileged \
     --mount type=bind,source=${TMT_TEST_DATA},target=/mnt/ \
     -it \
     quay.io/mizdebsk/mbici-tf:latest /run.sh
-  cat results-template.yaml >${TMT_TEST_DATA}/results.yaml
 result: custom
