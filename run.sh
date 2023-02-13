@@ -30,7 +30,7 @@ set -x
 	  -workDir work
 
 /mbici-wf report \
-	  -tmt \
+	  -full \
 	  -plan plan.xml \
 	  -platform platform.xml \
 	  -subject subject.xml \
