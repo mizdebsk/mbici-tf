@@ -36,4 +36,4 @@ set -x
 	  -subject subject.xml \
 	  -workflow workflow.xml \
 	  -resultDir result \
-	  -reportDir "${REPORT_DIR}"
+	  -reportDir "${TMT_TEST_DATA}"

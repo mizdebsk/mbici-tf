@@ -2,5 +2,17 @@ discover:
   how: fmf
 provision:
   how: virtual
+prepare:
+  - how: install
+    package:
+      - java-17-openjdk-devel
+      - git-core
+      - mock
+  - how: shell
+    script: |
+      git clone https://github.com/mizdebsk/mbici-workflow.git
+      cd ./mbici-workflow
+      ./build.sh
+      cp -a target/mbici-wf /
 execute:
   how: tmt

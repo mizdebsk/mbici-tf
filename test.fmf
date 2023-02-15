@@ -1,16 +1,3 @@
 duration: 6h
-require:
-  - podman
-test: |
-  chmod a+rwx ${TMT_TEST_DATA}
-  podman run \
-    -e PLAN="${PLAN}" \
-    -e PLATFORM="${PLATFORM}" \
-    -e SUBJECT="${SUBJECT}" \
-    -e REPORT_DIR="/mnt" \
-    --privileged \
-    --mount type=bind,source=${TMT_TEST_DATA},target=/mnt/ \
-    --mount type=bind,source=${PWD},target=/srv/ \
-    -it \
-    quay.io/mizdebsk/mbici-tf:latest /srv/run.sh
+test: ./run.sh
 result: custom
